@@ -1,0 +1,218 @@
+<html>
+    <head>
+        <title>Biodata Mahasiswa</title>
+        <style>
+            body{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                background-image: url('img/bg1.jpg');
+                background-repeat: repeat;
+            }
+            h1{
+                color: #5389E1;
+                text-align: center;
+            }
+            h2{
+                color: #1561db;
+            }
+            a:link {
+                text-decoration: none;
+                color: #ff0000;
+            }
+
+            a:visited {
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+                color: #ef9809;
+            }
+
+            a:active {
+                text-decoration: underline;
+                color: green;
+            }
+            .table-pribadi{
+                width: 50%;
+            }
+            .table-pribadi tr, td{
+                margin-right: 20px;
+                margin-left: 20px;
+            }
+            .table-pendidikan {
+                font-family: Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            .table-pendidikan td, .table-pendidikan th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+            .table-pendidikan tr{background-color: #f2f2f2;}
+
+            .table-pendidikan tr:hover {background-color:transparent;}
+
+            .table-pendidikan th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #5389E1;
+                color: white;
+            }
+            .table-portfolio{
+                width: max-content;
+
+            }
+            .table-portfolio td{
+                text-align: center;
+
+            }
+            .footer {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                grid-gap: 10px;
+                background-color: #5389E1;
+                padding: 10px;
+                }
+
+            .footer > div {
+                color: white;
+                font-size: 14px;
+            }
+
+            .copyright {
+                font-size: 40px;
+                margin-top: 15px;
+                grid-column: 1 / span 3;
+                text-align: left;
+            }
+            .sosmed img{
+                text-align: right;
+                width: 35px;
+                height: 35px;
+                padding: 3px;
+                border-radius: 10px;
+            }
+            .sosmed a{
+                position: relative;
+                left: 150px;
+            }
+        </style>
+    </head>
+        <h1>BIODATA DIRI</h1>
+    <hr>
+        <br><br>
+        <table class="table-pribadi">
+            <tr>
+                <td rowspan="8"><img src="img/image.jpg"></td>
+                <td colspan="3"><u><h2>Data Pribadi</h2></u></td>
+            </tr>
+            <tr>
+                <td>Nama Lengkap</td>
+                <td>:</td>
+                <td>Putri Dwi Isabella</td>
+            </tr>
+            <tr>
+                <td>Tanggal Lahir</td>
+                <td>:</td>
+                <td>28 Juli 2002</td>
+            </tr>
+            <tr>
+                <td>Fakultas</td>
+                <td>:</td>
+                <td>FTEIC</td>
+            </tr>
+            <tr>
+                <td>Jurusan</td>
+                <td>:</td>
+                <td>Sistem Informasi</td>
+            </tr>
+            <tr>
+                <td>Asal Daerah</td>
+                <td>:</td>
+                <td>Madiun, Jawa Timur</td>
+            </tr>
+            <tr>
+                <td>Email</th>
+                <td>:</td>
+                <td>
+                   putriisabella1007@gmail.com
+                </td>
+            </tr>
+            <tr>
+                <td>Github</td>
+                <td>:</td>
+                <td><a href="https://github.com/isabella2807/">isabella2807</a></td>
+            </tr>
+        </table>
+
+        <u><h2>Riwayat Pendidikan</h2></u>
+        <table class="table-pendidikan">
+            <tr>
+                <th>No.</th>
+                <th>Nama Sekolah</th>
+                <th>Tahun</th>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>SDN 2 Kaliabu</td>
+                <td>2008 - 2014</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>SMPN 1 Mejayan</td>
+                <td>2014 - 2017</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>SMKN 1 Mejayan</td>
+                <td>2017 - 2020</td>
+            </tr>
+
+        </table>
+            <u><h2>Kemampuan</h2></u>
+            <ol>
+                <li>Pemorgraman</li>
+                <ul>
+                    <li>HTML</li>
+                    <li>SQL</li>
+                    <li>PHP</li>
+                    <li>Java</li>
+                </ul>
+                <li>
+                    Microsoft Office
+                    <ul>
+                        <li>Word</li>
+                        <li>Excel</li>
+                        <li>Powertpoint</li>
+                        <li>Access</li>
+                    </ul>
+                </li>
+            </ol>
+        <u><h2>Portfolio</h2></u>
+        <table class="table-portfolio">
+            <tr>
+                <td><img src="img/proyek/proyek1.png" ></td>
+                <td><img src="img/proyek/proyek2.png"></td>
+                <td><img src="img/proyek/proyek3.png"></td>
+            </tr>
+            <tr>
+                <td ><i>Program Kasir berbasis Web</i></td>
+                <td ><i>Program Kasir berbasis Dekstop</i></td>
+                <td ><i>Tampilan Marketplace dengan Bootstarp</i></td>
+            </tr>
+        </table>
+        <br><br>
+    <hr>
+    <div class="footer">
+        <div class="copyright">
+            <b>Copyright &copy; 2021 Putri Isabella</b>
+        </div>
+        <div class="sosmed">
+            <a href="https://www.linkedin.com/in/putri-dwi-isabella-90231221b/"><img src="img/sosmed/linkedin.png"></a>
+            <a href="https://www.instagram.com/putri_dwiisabella/"><img src="img/sosmed/instagram.png"></a>
+            <a href="https://twitter.com/putriisabellaa?s=08"><img src="img/sosmed/twitter.png"></a>
+            <a href="https://www.facebook.com/profile.php?id=100041261933886"><img src="img/sosmed/facebook.png"></a>
+        </div>
+    </div>
+</html>
