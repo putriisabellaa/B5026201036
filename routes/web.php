@@ -24,3 +24,13 @@ Route::get('praktikum2', 'ViewController@showPraktikum2');
 Route::get('ets', 'ViewController@showEts');
 Route::get('tugasphp', 'ViewController@showTugasPhp');
 Route::post('calculation', 'ViewController@calcFibonnaci');
+
+//Route buat Pegawai (CRUD)
+Route::prefix('pegawai')->group(function () {
+    Route::get('/', 'pegawaiController@index');
+    Route::get('/tambah', 'pegawaiController@tambah');
+    Route::post('/store', 'PegawaiController@store');
+    Route::get('/edit/{id}', 'PegawaiController@edit');
+    Route::post('/update', 'PegawaiController@update');
+    Route::get('/hapus/{id}', 'PegawaiController@hapus');
+});
