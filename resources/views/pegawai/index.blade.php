@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
 </head>
 <body>
 

@@ -34,3 +34,12 @@ Route::prefix('pegawai')->group(function () {
     Route::post('/update', 'PegawaiController@update');
     Route::get('/hapus/{id}', 'PegawaiController@hapus');
 });
+//Route buat Mutasi (CRUD)
+Route::prefix('mutasi')->group(function () {
+    Route::get('/', 'MutasiController@index');
+    Route::get('/tambah', 'MutasiController@tambah');
+    Route::post('/store', 'MutasiController@store');
+    Route::get('/edit/{id}', 'MutasiController@edit');
+    Route::post('/update', 'MutasiController@update');
+    Route::get('/hapus/{id}', 'MutasiController@hapus');
+});
