@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
+	<title>Data Mutasi</title>
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
 </head>
 <body>
-
-	<h2>www.malasngoding.com</h2>
 	<h3>Data Mutasi</h3>
 
 	<a href="/mutasi/tambah"> + Tambah Mutasi Baru</a>
