@@ -1,41 +1,46 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
+@extends('layout/ceria')
+@section('title', 'Data Pegawai')
+@section('section_title', 'Data Pegawai')
+@section('content')
+<div class="col-lg-12">
+    <div class="card">
 
-	<h2>www.malasngoding.com</h2>
-	<h3>Data Pegawai</h3>
+        <div class="card-body">
+            <a href="/pegawai/tambah"><h6 class="card-title">Tambah Data</h6></a>
+            <!-- Start Table Pegawai -->
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nama Pegawai</th>
+                    <th scope="col">Jabatan</th>
+                    <th scope="col">Umur</th>
+                    <th scope="col">Alamat</th>
+                    <th scope="col">Opsi</th>
+                  </tr>
+                </thead>
+                <tbody>
 
-	<a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
-
-	<br/>
-	<br/>
-
-	<table border="1">
-		<tr>
-			<th>Nama</th>
-			<th>Jabatan</th>
-			<th>Umur</th>
-			<th>Alamat</th>
-			<th>Opsi</th>
-		</tr>
-		@foreach($pegawai as $p)
-		<tr>
-			<td>{{ $p->pegawai_nama }}</td>
-			<td>{{ $p->pegawai_jabatan }}</td>
-			<td>{{ $p->pegawai_umur }}</td>
-			<td>{{ $p->pegawai_alamat }}</td>
-			<td>
-				<a href="/pegawai/edit/{{ $p->pegawai_id }}">Edit</a>
-				|
-				<a href="/pegawai/hapus/{{ $p->pegawai_id }}">Hapus</a>
-			</td>
-		</tr>
-		@endforeach
-	</table>
+                    <?php $no=1 ?>
+                 @foreach($pegawai as $p)
+                  <tr>
+                    <th scope="col">{{$no++}}</th>
+                    <td>{{ $p->pegawai_nama }}</td>
+                    <td>{{ $p->pegawai_jabatan }}</td>
+                    <td>{{ $p->pegawai_umur }}</td>
+                    <td>{{ $p->pegawai_alamat }}</td>
+                    <td>
+                        <a href="/pegawai/edit/{{ $p->pegawai_id}}" class="btn btn-warning btn-sm" >Edit</a>
+                        <a href="/pegawai/hapus/{{ $p->pegawai_id}}" class="btn btn-danger btn-sm" >Hapus</a>
+                    </td>
+                  </tr>
+                 @endforeach
+                </tbody>
+            </table>
+              <!-- End Table Pegawai -->
+        </div>
+     </div>
+</div>
+@endsection
 
 
-</body>
-</html>
