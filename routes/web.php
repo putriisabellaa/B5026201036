@@ -12,7 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layout/app');
+});
+Route::get('try', function () {
+    return view('try-blade');
 });
 Route::get('praktikum1', function () {
     return view('prak1web');
@@ -43,3 +46,13 @@ Route::prefix('mutasi')->group(function () {
     Route::post('/update', 'MutasiController@update');
     Route::get('/hapus/{id}', 'MutasiController@hapus');
 });
+Route::prefix('absen')->group(
+    function () {
+        Route::get('/', 'AbsenController@index');
+        Route::get('/tambah', 'AbsenController@tambah');
+        Route::post('/store', 'AbsenController@store');
+        Route::get('/edit/{id}', 'AbsenController@edit');
+        Route::post('/update', 'AbsenController@update');
+        Route::get('/hapus/{id}', 'AbsenController@hapus');
+    }
+);
