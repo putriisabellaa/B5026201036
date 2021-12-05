@@ -1,4 +1,4 @@
-@extends('layout/app')
+@extends('layout/ceria')
 @section('title', 'Tambah Pegawai')
 @section('section_title', 'Tambah Pegawai')
 @section('content')

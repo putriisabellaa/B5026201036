@@ -1,40 +1,4 @@
-{{-- @extends('layout/bootstrap')
-@section('title', 'Data Absen')
-@section('section', 'Data Absen')
-
-@section('isikonten')
-<div class="d-grid gap-2 d-md-flex justify-content">
-  <a href="/absen/tambah" class="btn btn-primary" type="button">Tambah Data</a>
-</div>
-<div class="table-responsive">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">ID Pegawai</th>
-              <th scope="col">Tanggal</th>
-              <th scope="col">Status</th>
-              <th scope="col">Opsi</th>
-            </tr>
-          </thead>
-          <tbody>
-            @foreach($absen as $p)
-                <tr>
-                    <td>{{ $p->IDPegawai }}</td>
-                    <td>{{ $p->Tanggal }}</td>
-                    <td>{{ $p->Status }}</td>
-                    <td>
-                        <a href="/absen/edit/{{ $p->ID }}" class="btn btn-warning btn-sm" >Edit</a>
-                        <a href="/absen/hapus/{{ $p->ID }}" class="btn btn-danger btn-sm" >Hapus</a>
-                    </td>
-                </tr>
-            @endforeach
-          </tbody>
-        </table>
-      </div>
-@endsection
-
- --}}
-@extends('layout/app')
+@extends('layout/ceria')
 @section('title', 'Data Absen Pegawai')
 @section('section_title', 'Data Absen Pegawai')
 @section('content')
