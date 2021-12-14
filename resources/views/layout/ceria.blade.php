@@ -40,9 +40,9 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="/" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block">Putri Dwi Isabella</span>
+        <span class="d-none d-lg-block">5026201036</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
@@ -106,9 +106,9 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
-          <i class="bi bi-calendar-event"></i>
-          <span>Minggu Depan</span>
+        <a class="nav-link collapsed" href="/kaos">
+          <i class="bi bi-cart2"></i>
+          <span>Kaos</span>
         </a>
       </li><!-- End Dashboard Nav -->
       <li class="nav-item">
