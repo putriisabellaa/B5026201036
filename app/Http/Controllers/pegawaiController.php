@@ -7,63 +7,72 @@ use Illuminate\Support\Facades\DB;
 
 class pegawaiController extends Controller
 {
-    //
+    // Script Menampilkan Tabel Pegawai
     public function index()
     {
-        //menga,bil data dari tabel pegawai
-        $pegawai = DB::table('pegawai')->get();
-
-        //mengirim data pegawai ke view index
+        $pegawai = DB::table('pegawai')->paginate(5);
         return view('pegawai.index', ['pegawai' => $pegawai]);
     }
+
+    // Script Proses Search Data Pegawai
+    public function cari(Request $request)
+    {
+        $cari = $request->cari;
+        $pegawai = DB::table('pegawai')
+            ->where('pegawai_nama', 'like', "%" . $cari . "%")
+            ->orWhere('pegawai_jabatan', 'like', "%" . $cari . "%")
+            ->paginate(5);
+        return view('pegawai.index', ['pegawai' => $pegawai]);
+    }
+
+    // Script Menampilkan form Tambah Pegawai
     public function tambah()
     {
         return view('pegawai.tambah');
     }
 
-    // method untuk insert data ke table pegawai
+    // Script Proses Simpan Data Pegawai
     public function store(Request $request)
     {
-        //DB::table('')->insert();
-        // insert data ke table pegawai
         DB::table('pegawai')->insert([
             'pegawai_nama' => $request->nama,
             'pegawai_jabatan' => $request->jabatan,
             'pegawai_umur' => $request->umur,
             'pegawai_alamat' => $request->alamat
         ]);
-        // alihkan halaman ke halaman pegawai
         return redirect('/pegawai');
     }
-    // method untuk edit data pegawai
+
+    // Script Detail Data Pegawai
+    public function view($id)
+    {
+        $pegawai = DB::table('pegawai')->where('pegawai_id', $id)->get();
+        return view('pegawai.detail', ['pegawai' => $pegawai]);
+    }
+
+    // Script Menampilkan form Edit Kaos
     public function edit($id)
     {
-        // mengambil data pegawai berdasarkan id yang dipilih
         $pegawai = DB::table('pegawai')->where('pegawai_id', $id)->get();
-
-        // passing data pegawai yang didapat ke view edit.blade.php
         return view('pegawai.edit', ['pegawai' => $pegawai]);
     }
-    // update data pegawai
+
+    //Script Proses Update Pegawai
     public function update(Request $request)
     {
-        // update data pegawai
         DB::table('pegawai')->where('pegawai_id', $request->id)->update([
             'pegawai_nama' => $request->nama,
             'pegawai_jabatan' => $request->jabatan,
             'pegawai_umur' => $request->umur,
             'pegawai_alamat' => $request->alamat
         ]);
-        // alihkan halaman ke halaman pegawai
         return redirect('/pegawai');
     }
-    // method untuk hapus data pegawai
+
+    // Script Hapus Data Pegawai
     public function hapus($id)
     {
-        // menghapus data pegawai berdasarkan id yang dipilih
         DB::table('pegawai')->where('pegawai_id', $id)->delete();
-
-        // alihkan halaman ke halaman pegawai
         return redirect('/pegawai');
     }
 }

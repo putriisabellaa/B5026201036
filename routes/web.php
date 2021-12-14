@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('layout/app');
+    return view('welcome');
 });
 Route::get('try', function () {
     return view('try-blade');
@@ -31,28 +31,46 @@ Route::post('calculation', 'ViewController@calcFibonnaci');
 //Route buat Pegawai (CRUD)
 Route::prefix('pegawai')->group(function () {
     Route::get('/', 'pegawaiController@index');
+    Route::get('/cari', 'PegawaiController@cari');
     Route::get('/tambah', 'pegawaiController@tambah');
     Route::post('/store', 'PegawaiController@store');
     Route::get('/edit/{id}', 'PegawaiController@edit');
     Route::post('/update', 'PegawaiController@update');
     Route::get('/hapus/{id}', 'PegawaiController@hapus');
+    Route::get('/detail/{id}', 'PegawaiController@view');
 });
 //Route buat Mutasi (CRUD)
 Route::prefix('mutasi')->group(function () {
     Route::get('/', 'MutasiController@index');
+    Route::get('/cari', 'MutasiController@cari');
     Route::get('/tambah', 'MutasiController@tambah');
     Route::post('/store', 'MutasiController@store');
     Route::get('/edit/{id}', 'MutasiController@edit');
     Route::post('/update', 'MutasiController@update');
     Route::get('/hapus/{id}', 'MutasiController@hapus');
+    Route::get('/detail/{id}', 'MutasiController@view');
 });
 Route::prefix('absen')->group(
     function () {
         Route::get('/', 'AbsenController@index');
+        Route::get('/cari', 'AbsenController@cari');
         Route::get('/tambah', 'AbsenController@tambah');
         Route::post('/store', 'AbsenController@store');
         Route::get('/edit/{id}', 'AbsenController@edit');
         Route::post('/update', 'AbsenController@update');
         Route::get('/hapus/{id}', 'AbsenController@hapus');
+        Route::get('/detail/{id}', 'AbsenController@view');
+    }
+);
+Route::prefix('kaos')->group(
+    function () {
+        Route::get('/', 'KaosController@index');
+        Route::get('/cari', 'KaosController@cari');
+        Route::get('/tambah', 'KaosController@tambah');
+        Route::post('/store', 'KaosController@store');
+        Route::get('/edit/{id}', 'KaosController@edit');
+        Route::post('/update', 'KaosController@update');
+        Route::get('/hapus/{id}', 'KaosController@hapus');
+        Route::get('/detail/{id}', 'KaosController@view');
     }
 );

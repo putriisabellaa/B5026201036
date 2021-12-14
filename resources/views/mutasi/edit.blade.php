@@ -3,6 +3,7 @@
 @section('section_title', 'Edit Mutasi Pegawai')
 @section('content')
     <div class="col-lg-12">
+         <div class="card" style="height: 480px">
             <div class="card-body">
              <!-- Horizontal Form -->
              @foreach($mutasi as $mut)
@@ -44,7 +45,7 @@
                     <input type="text" class="form-control" id="inputEmail" name="SubDepartemen" value="{{ $mut->SubDepartemen }}">
                 </div>
                 </div>
-                <div class="text-left">
+                <div class="text-left pt-3">
                   <button type="submit" class="btn btn-primary">Submit</button>
                   <button type="reset" class="btn btn-secondary">Reset</button>
                   <a href="/mutasi" class="btn btn-light">Cancel</a>
@@ -82,6 +83,7 @@
                     });
         </script>
         </div>
+    </div>
 @endsection
 
 

@@ -3,6 +3,7 @@
 @section('section_title', 'Tambah Absen Pegawai')
 @section('content')
     <div class="col-lg-12">
+        <div class="card" style="height: 480px">
             <div class="card-body">
               <!-- Horizontal Form -->
               <form action="/absen/store" method="post">
@@ -43,7 +44,7 @@
                     </div>
                   </div>
                 </fieldset>
-                <div class="text-left">
+                <div class="text-left pt-3">
                   <button type="submit" class="btn btn-primary">Submit</button>
                   <button type="reset" class="btn btn-secondary">Reset</button>
                   <a href="/absen" class="btn btn-light">Cancel</a>
@@ -80,6 +81,7 @@
                     });
                 </script>
         </div>
+    </div>
 @endsection
 
 
