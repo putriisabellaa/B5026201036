@@ -50,6 +50,8 @@ Route::prefix('mutasi')->group(function () {
     Route::get('/hapus/{id}', 'MutasiController@hapus');
     Route::get('/detail/{id}', 'MutasiController@view');
 });
+
+//Route buat Absen (CRUD)
 Route::prefix('absen')->group(
     function () {
         Route::get('/', 'AbsenController@index');
@@ -62,6 +64,8 @@ Route::prefix('absen')->group(
         Route::get('/detail/{id}', 'AbsenController@view');
     }
 );
+
+//Route buat Kaos (CRUD)
 Route::prefix('kaos')->group(
     function () {
         Route::get('/', 'KaosController@index');
@@ -74,3 +78,15 @@ Route::prefix('kaos')->group(
         Route::get('/detail/{id}', 'KaosController@view');
     }
 );
+
+//Route buat Karyawan (Praktikum) (CRUD)
+Route::prefix('praktikum')->group(function () {
+    Route::get('/', 'PraktikumController@index');
+    Route::get('/cari', 'PraktikumController@cari');
+    Route::get('/tambah', 'PraktikumController@tambah');
+    Route::post('/store', 'PraktikumController@store');
+    Route::get('/edit/{NIP}', 'PraktikumController@edit');
+    Route::post('/update', 'PraktikumController@update');
+    Route::get('/hapus/{NIP}', 'PraktikumController@hapus');
+    Route::get('/detail/{NIP}', 'PraktikumController@view');
+});

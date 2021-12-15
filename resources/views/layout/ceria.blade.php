@@ -112,7 +112,7 @@
         </a>
       </li><!-- End Dashboard Nav -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="/praktikum">
           <i class="bi bi-file-break"></i>
           <span>Praktikum</span>
         </a>
