@@ -12,7 +12,7 @@
                 <div class="row mb-3">
                   <label for="inputEmail3" class="col-sm-2 col-form-label">NIP</label>
                   <div class="col-sm-10">
-                    <input type="text" value="{{ $prak->NIP }}" class="form-control" id="inputText" name="NIP" readonly>
+                    <input type="text" value="{{ $prak->NIP }}" class="form-control" id="inputText" name="NIP">
                   </div>
                 </div>
                 <div class="row mb-3">
@@ -30,7 +30,7 @@
                 <div class="row mb-3">
                   <label for="inputPassword3" class="col-sm-2 col-form-label">Gaji</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputPassword" name="Gaji" value="{{ number_format($prak->Gaji) }}">
+                    <input type="text" class="form-control" id="inputPassword" name="Gaji" value="{{ $prak->Gaji }}">
                   </div>
                 </div>
                 <div class="text-left pt-3">
